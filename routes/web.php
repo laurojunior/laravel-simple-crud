@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/api/v1/entregas/{id?}', 'EntregaController@index');
+Route::post('/api/v1/entregas', 'EntregaController@store');
+Route::post('/api/v1/entregas/{id}', 'EntregaController@update');
+Route::delete('/api/v1/entregas/{id}', 'EntregaController@destroy');
